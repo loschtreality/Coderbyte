@@ -51,3 +51,6 @@ function arrayAdd(array) {
 }
 console.log('hello');
 console.log(arrayAdd([4, 6, 23, 10, 1, 3]));
+
+
+//NEEDS WORK
