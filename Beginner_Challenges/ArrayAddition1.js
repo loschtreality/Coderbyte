@@ -3,54 +3,34 @@
 //try solving with recursion rps style
 
 function arrayAdd(array) {
-  var count = 0;
-  var indexUp = 0;
-  var indexDown = array.length-1;
-  var loopCount = 0;
-  var sorted = array.sort(function(a,b){return a-b;});
-  var store = array.pop();
-    function up(countKey){
-      console.log(countKey,'upkey');
-      if (indexUp > array.length-1) {
-        indexUp = 0;
-      }
-      if (countKey === store) {
-        return true;
-      }
-      countKey += array[indexUp];
-      indexUp++;
-      return countKey;
-    }
-    function down(countKey){
-      console.log(countKey,'downkey');
-      if (indexDown < 0) {
-        indexDown = array.length-1;
-      }
-      if (countKey === store) {
-        return 'true';
-      }
-      countKey -= array[indexDown];
-      indexDown--;
-      return countKey;
-    }
+  //sort the array
+var sort = array.sort(function(a,b){return a-b;});
+  //find lowest value
+var init = sort[0];
+  //find highest value
+var target = sort.pop();
 
-    if(count <= store){
-    while (count <= store) {
-      up(count);
-      loopCount++;
-    }
-  }else if (count >= store) {
-        while(count >= store){
-        down(count);
-        loopCount++;
+
+  //Recursive function
+function find(start){
+  if(start === target){ //if found, return true
+    return true;
+  }
+  else if(start > target){
+    return null;
+  }
+  else{ //add each of the numbers to create paths
+      for (var i = 1; i < sort.length; i++) {
+        find(start + sort[i]);
       }
-    }
-    if (loopCount >= 100) {
-      return 'false';
-    }
+    return false;
+  }
 }
-console.log('hello');
+
+return find(init); //start with the lowest number
+
+}
+
 console.log(arrayAdd([4, 6, 23, 10, 1, 3]));
 
-
-//NEEDS WORK
+//This still needs work
