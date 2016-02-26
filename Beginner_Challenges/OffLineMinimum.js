@@ -2,33 +2,37 @@
 
 
 function OffLineMinimum(strArr) {
-var newSet = '';
-var container = [];
-var lowest;
-var parse = strArr.map(function(index){ //parse all the numbers
-    if (/(\d)+/.test(index)) { //if numbers match string digit, parse it
-      return parseInt(index);
+var result = [];
+var temp = [];
+var minimum;
+//Parse all elements in array
+var parseArr = strArr.map(function(input){if (/[\d]+/g.test(input)) {
+    return Number(input);
     }
-    else{ //else return the letter
-      return index;
-    }
+    return input;
   });
-
-  for (var i = 0; i < strArr.length; i++) {
-    if(strArr[i] === 'E'){ //find each 'E' in the array
-      var temp = [];
-      for (var j = i-1; j >= 0; j--) { //traverse left from 'E' and push values into temp array
-          if (typeof strArr[j] === 'number') {
-            temp.push(strArr[j]);
+//Loop through each element until "E"
+  for (var i = 0; i < parseArr.length; i++) {
+    if (parseArr[i] === 'E') {
+      //push all numbers from E to start
+        for (var j = 0; j < i; j++) {
+          if (typeof parseArr[j] === 'number') {
+            temp.push(parseArr[j]);
           }
-      }
-      lowest = Math.min.apply(null,temp); //find lowest val in temp array
-      console.log(lowest, 'lowest');
-      container.push(lowest); //push the value into the container
-      strArr.splice(strArr.indexOf(lowest),1); //remove the element from the strArr
-      }
+        }
+        //Find minimum, push it into result array, delete minimum from original array
+        minimum = Math.min.apply(null,temp);
+        result.push(minimum);
+        parseArr.splice(parseArr.indexOf(minimum),1);
+        //set i to the index of E - 1 to account for repeating E
+        i = parseArr.indexOf('E')-1;
+        //remove E from array to avoid infinite loop
+        parseArr.splice(parseArr.indexOf("E"),1);
+        temp = [];
     }
-    return container;
+  }
+  //return new array with numbers
+  return result;
 }
 
 
