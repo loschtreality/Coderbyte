@@ -31,8 +31,8 @@ var parseArr = strArr.map(function(input){if (/[\d]+/g.test(input)) {
         temp = [];
     }
   }
-  //return new array with numbers
-  return result;
+  //return new array with numbers separated by commas
+  return result.join(',');
 }
 
 
