@@ -5,20 +5,22 @@
 function LetterCountI(str) {
 var words = str.toLowerCase().split(" ");
 var dictionary = {};
+var greatest;
+var result = [];
 console.log(words, 'words');
-    for (var i = 0; i < words.length; i++) {
-      var count = 0;
+  for (var i = 0; i < words.length; i++) {
       for (var j = 0; j < words[i].length; j++) {
-        if (words[i].indexOf(words[i].charAt(j)) >= 2) {
-          count++;
-          dictionary[words[i]] = count;
+        if (dictionary[words[i][j]]) {
+          dictionary[words[i][j]] += 1;
+        }
+        else{
+          dictionary[words[i][j]] = 0;
         }
       }
-      count = 0;
-    }
-    return dictionary;
+  }
+return dictionary;
 }
 
 
-console.log(LetterCountI('Hello Apple Pie'));
+console.log(LetterCountI('Hello')); //hello
 //LetterCountI('Hello Apple Pie');
