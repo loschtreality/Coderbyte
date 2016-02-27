@@ -1,28 +1,22 @@
-// Using the JavaScript language, have the function DashInsert(str) insert dashes ('-') between each two odd numbers in str. For example: if str is 454793 the output should be 4547-9-3. Don't count zero as an odd number.
+// Using the JavaScript language, have the function DashInsert(str) insert dashes ('-') between each two odd numbers in str. For example: if str is 454793 the output should be 4547-9-3. Don't count zero as an odd number. (Parameter is a string)
 
 function DashInsert(str) {
-var numbers;
-var answer;
-//Stringify numbers if str is not a string
-  if (typeof str !== 'string') {
-  numbers = JSON.stringify(str);
-}
-
-//Split string into array
-    numbers = numbers.split('');
-//Map the array and parse each number
-    numbers = numbers.map(function(index){return JSON.parse(index);});
-
-
-  for (var i = 0; i < numbers.length-1; i++) {
-    if (numbers[i] % 2 !== 0 && numbers[i+1] % 2 !== 0) {
-      answer = numbers.splice(i+1,0,'-');
+// split, then convert to number
+var numbers = str.split('').map(function(input){return Number(input);});
+var result = [];
+  for (var i = 0; i < numbers.length; i++) {
+    //if current index and next index are odd, i is less than array length (avoids extra dash), push
+    if (numbers[i] % 2 !== 0 && numbers[i+1] % 2 !== 0 && i !== numbers.length-1) {
+      result.push(numbers[i]);
+      result.push('-');
+    }else{
+      result.push(numbers[i]);
     }
   }
-return answer;
+  //join result into string
+  return result.join('');
 }
 
-console.log(DashInsert(454793));
-// return str.replace(/([13579])/g,function(letter){
-//   return letter + "-";
-// });
+console.log(DashInsert("454793")); //4547-9-3
+console.log(DashInsert("99946")); //9-9-946
+console.log(DashInsert("56730")); //567-30
