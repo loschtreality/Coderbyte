@@ -4,23 +4,34 @@
 
 function LetterCountI(str) {
 var words = str.toLowerCase().split(" ");
-var dictionary = {};
-var greatest;
 var result = [];
-console.log(words, 'words');
+var highestFreq;
+var position;
   for (var i = 0; i < words.length; i++) {
+    var greatest = 1;
+    var dictionary = {};
       for (var j = 0; j < words[i].length; j++) {
         if (dictionary[words[i][j]]) {
-          dictionary[words[i][j]] += 1;
+          dictionary[words[i][j]]++;
+          greatest = dictionary[words[i][j]];
         }
         else{
-          dictionary[words[i][j]] = 0;
+          dictionary[words[i][j]] = 1;
         }
       }
+      result.push(greatest);
+      greatest = 1;
   }
-return dictionary;
+  highestFreq = Math.max.apply(null,result);
+  console.log(highestFreq,'highest');
+  console.log(result,'result adsfasd');
+  if (highestFreq === 1) {
+    return -1;
+  }
+  position = result.indexOf(highestFreq);
+  return words[position];
 }
 
 
-console.log(LetterCountI('Hello')); //hello
-//LetterCountI('Hello Apple Pie');
+ console.log(LetterCountI('hello apppppppple'));
+//;
