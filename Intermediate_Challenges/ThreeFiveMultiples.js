@@ -3,21 +3,15 @@
 
 function ThreeFiveMultiples(num) {
 var summation = 0;
-  function multiples(start){
-    if (start > num) {
-      return null;
+  for (var i = 1; i < num; i++) {
+    if (i % 5 === 0 || i % 3 === 0) {
+      summation += i;
     }
-    if (start <= num) {
-      summation += start;
-    }
-
-      return multiples(start * 5) || multiples(start * 3);
   }
-  multiples.call(this,1,3,5);
-return summation;
+  return summation;
 }
 
 
-//console.log(ThreeFiveMultiples(6)); //8
+console.log(ThreeFiveMultiples(6)); //8
 console.log(ThreeFiveMultiples(10)); //23
-//console.log(ThreeFiveMultiples(1)); //0
+console.log(ThreeFiveMultiples(1)); //0
