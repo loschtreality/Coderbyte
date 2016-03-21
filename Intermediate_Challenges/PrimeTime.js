@@ -16,8 +16,7 @@ for (var i = 2; i <= Math.floor(Math.sqrt(num)); i++) {
   return true;
 }
 
-console.log(Math.floor(Math.sqrt(8)));
-console.log(PrimeTime(8)); //true
-//console.log(PrimeTime(110)); //false
-//console.log(PrimeTime(7)); //true
-//console.log(PrimeTime(199)); //true
+console.log(PrimeTime(8)); //false
+console.log(PrimeTime(110)); //false
+console.log(PrimeTime(7)); //true
+console.log(PrimeTime(199)); //true
