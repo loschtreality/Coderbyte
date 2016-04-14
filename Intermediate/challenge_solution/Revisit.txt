@@ -1,0 +1,6 @@
+Will be revisiting the following exercises:
+
+1. Bracket Matcher (1 incorrect case)
+2. PermutationStep (Post pending)
+3. StringSwapII (Cases not passed)
+3. StringReduction (Post pending)
