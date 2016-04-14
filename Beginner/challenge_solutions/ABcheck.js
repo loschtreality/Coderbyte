@@ -8,9 +8,3 @@ if (str.indexOf('a') === -1 || str.indexOf('b') == -1) {
 }
   return Math.abs(str.indexOf('a') - str.indexOf('b'))-1 === 3 || Math.abs(str.lastIndexOf('a') - str.lastIndexOf('b'))-1 === 3;
 }
-
-
-console.log(ABCheck('after baldy'));
-console.log(ABCheck("lane borrowed"));
-console.log(ABCheck("Laura sobs"));
-console.log(ABCheck("aaaaddddd"));
