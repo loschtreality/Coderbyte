@@ -16,7 +16,3 @@ var result = [];
   //join result into string
   return result.join('');
 }
-
-console.log(DashInsert("454793")); //4547-9-3
-console.log(DashInsert("99946")); //9-9-946
-console.log(DashInsert("56730")); //567-30

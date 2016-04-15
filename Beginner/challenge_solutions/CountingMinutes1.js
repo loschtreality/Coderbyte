@@ -43,9 +43,3 @@ function CountingMinutesI(str) {
     return timeB - timeA;
   }
 }
-
-
- console.log(CountingMinutesI('1:00pm-11:00am')); // 1320
-// console.log(CountingMinutesI('2:00pm-10:00am')); // 1200
-// console.log(CountingMinutesI('3:00pm-8:00am')); // 1020
-//console.log(CountingMinutesI('9:00am-10:00am')); // 60

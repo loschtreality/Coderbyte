@@ -21,7 +21,3 @@ function ChangingSequence(arr) {
 //Return if loop conditions are false
 return -1;
 }
-
-console.log(ChangingSequence([1, 2, 4, 6, 4, 3, 1])); //returns 3
-console.log(ChangingSequence([-4, -2, 9, 10])); //returns -1
-console.log(ChangingSequence([5, 4, 3, 2, 10, 11])); //returns 3

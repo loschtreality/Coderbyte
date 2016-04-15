@@ -25,7 +25,3 @@ function BitwiseOne(strArr) {
 return newNumber;
 
 }
-
-
-//console.log(BitwiseOne(["100", "000"])); // 100
-//console.log(BitwiseOne(["00011", "01010"])); // 01011
