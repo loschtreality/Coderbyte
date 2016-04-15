@@ -6,20 +6,22 @@ function ArithGeo(arr) {
   var geoDiff = arr[1] / arr[0];
   var arith;
   var geo;
+
     for (var i = 0; i < arr.length-1; i++) {
      arith =  arr[i] + arithDiff;
-     console.log(arith,'arith inside');
+
     }
-    console.log(arith, 'arith outside');
+
     if (arith === arr[arr.length-1]) {
       return 'Arithmetic';
     }
+
 //Geometric
   for (var j = 0; j < arr.length-1; j++) {
     geo = arr[j] * geoDiff;
-    console.log(geo, 'geo inside');
+
   }
-  console.log(geo, 'geo outside');
+
   if (geo === arr[arr.length-1]) {
     return 'Geometric';
   }
@@ -27,7 +29,3 @@ function ArithGeo(arr) {
     return '-1';
   }
 }
-
-
-console.log(ArithGeo([2, 6, 18, 54])); //Geometric
-console.log(ArithGeo([2, 4, 6, 8,10,12])); //Arithmetic

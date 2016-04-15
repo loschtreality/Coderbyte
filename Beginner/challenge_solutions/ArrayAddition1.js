@@ -25,11 +25,3 @@ var difference;
   }
   return false;
 }
-
-
-console.log(ArrayAdditionI([10,20,30,40,100]));//true
-console.log(ArrayAdditionI([31,2,90,50,7]));//true
-console.log(ArrayAdditionI([3,5,-1,8,12]));//true
-console.log(ArrayAdditionI([1,1,1,1,6]));//false
-console.log(ArrayAdditionI([-3,15,-1,2,12]));//false
-console.log(ArrayAdditionI([500,17,32,50,100]));//false

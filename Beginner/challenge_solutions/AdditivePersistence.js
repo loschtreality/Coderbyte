@@ -17,7 +17,3 @@ var count = 0;
   }
   return count;
 }
-
-console.log(AdditivePersistence(4)); // return 0
-console.log(AdditivePersistence(19)); // return 2
-console.log(AdditivePersistence(2718)); //return 2
