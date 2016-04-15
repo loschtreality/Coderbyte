@@ -21,8 +21,3 @@ function DivisionStringified(num1,num2) {
       return calculation;
     }
 }
-
-console.log(DivisionStringified(101077282, 21123));
-console.log(DivisionStringified(175,24));
-
-console.log(DivisionStringified(123456789,10000)); //12,346
