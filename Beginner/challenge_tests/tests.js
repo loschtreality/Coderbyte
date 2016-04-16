@@ -81,3 +81,62 @@ QUnit.test("Division Stringified",function(assert){
   assert.equal(DivisionStringified(175,24),'7',"returns '7' when given 175 and 24");
   assert.equal(DivisionStringified(123456789,10000),'12,346',"returns '12,346' when given 123456789 and 10000");
 });
+
+QUnit.test("ExOh",function(assert){
+  assert.equal(ExOh('xooxxo'),true,"returns true when given 'xooxxo'");
+  assert.equal(ExOh('xxxo'),false,"returns false when given 'xxxo'");
+  assert.equal(ExOh('xoooooooooo'),false,"returns false when given 'xoooooooooo'");
+});
+
+
+QUnit.test("Hamming Distance",function(assert){
+  assert.equal(HammingDistance(["coder", "codec"]),1,"returns 1 when given ['coder', 'codec']");
+  assert.equal(HammingDistance(['10011', '10100']),3,"returns 3 when given ['10011', '10100']");
+  assert.equal(HammingDistance(['helloworld', 'worldhello']),8,"returns 8 when given ['helloworld', 'worldhello']");
+});
+
+
+QUnit.test("Letter Count I",function(assert){
+  assert.equal(LetterCountI('hello apppppppple'),'apppppppple',"returns 'apppppppple' when given 'hello apppppppple''");
+  assert.equal(LetterCountI('Today, is the greatest day ever!'),'greatest',"returns 'greates' when given 'Today, is the greatest day ever!'");
+  assert.equal(LetterCountI('no matches in this one'),-1,"returns -1 when given 'no matches in this one'");
+});
+
+QUnit.test("Longest Word", function(assert){
+  assert.equal(LongestWord('there is a very long word in this sentence'),'sentence',"returns 'sentence' when given 'there is a very long word in this sentence'");
+  assert.equal(LongestWord('thort and loooooong'),'loooooong',"returns 'sentence' when given 'short and loooooong'");
+  assert.equal(LongestWord('equal lauqe'),'equal',"returns 'equal' when given 'equal lauqe'");
+
+});
+
+QUnit.test("Mean Mode",function(assert){
+  assert.equal(MeanMode([5, 3, 3, 3, 1]),1,"returns 1 when given [5, 3, 3, 3, 1]");
+  assert.equal(MeanMode([4, 4, 4, 6, 2]),1,"returns 1 when given [4, 4, 4, 6, 2]");
+});
+
+QUnit.test("Multiplicative Persistence",function(assert){
+  assert.equal(MultiplicativePersistence(25),2,"returns 2 when given 25");
+  assert.equal(MultiplicativePersistence(4),0,"returns 0 when given 4");
+  assert.equal(MultiplicativePersistence(39),3,"returns 3 when given 39");
+});
+
+QUnit.test("Number Addition",function(assert){
+  assert.equal(NumberAddition("75Number9"),84,"returns 84 when given '75Number9'");
+  assert.equal(NumberAddition('88Hello 3World!'),91,"returns 91 when given '88Hello 3World!'");
+  assert.equal(NumberAddition('55Hello'),55,"returns 55 when given '55Hello'");
+  assert.equal(NumberAddition('5Hello 5'),10,"returns 10 when given '5Hello 5'");
+});
+
+
+QUnit.test("Off Line Minimum",function(assert){
+  assert.equal(OffLineMinimum(["5","4","6","E","1","7","E","E","3","2"]),'4,1,5',"returns '4,1,5' when given ['5','4','6','E','1','7','E','E','3','2']");
+  assert.equal(OffLineMinimum(["1","4","1","E","1","7","E","E","3","2"]),'1,1,1',"returns '1,1,1' when given ['1','4','1','E','1','7','E','E','3','2']");
+  assert.equal(OffLineMinimum(["1","4","1","1","7","3","2"]),[].join(','),"returns empty string when given ['1','4','1','1','7','3','2']");
+});
+
+
+QUnit.test("Overlapping Ranges",function(assert){
+  assert.equal(OverlappingRanges([4, 10, 2, 6, 3]),'true',"returns 'true' when given [4, 10, 2, 6, 3]");
+  assert.equal(OverlappingRanges([43, 120, 9, 1, 55]),'false',"returns 'false' when given [43, 120, 9, 1, 55]");
+
+});
