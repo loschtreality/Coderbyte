@@ -4,7 +4,7 @@
 function LongestWord(sen){
 var result = [];
 var compare;
-var words = sen.replace(/[^\w\s]/g,'')split(' ');
+var words = sen.replace(/[^\w\s]/g,'').split(' ');
 var lengths = words.map(function(index){
   return index.length;
 });

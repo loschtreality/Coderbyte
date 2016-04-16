@@ -10,5 +10,3 @@ var nums = str.match(/([0-9]+)/g);
   	return prev + curr;
   });
 }
-
-console.log(NumberAddition("75Number9"));

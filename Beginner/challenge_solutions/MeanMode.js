@@ -18,8 +18,3 @@ function MeanMode(arr) {
     }
 
 }
-
-
-var test = [4, 4, 4, 6, 2];
-
-console.log(MeanMode(test));

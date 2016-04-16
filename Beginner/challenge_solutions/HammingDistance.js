@@ -16,8 +16,3 @@ var array2 = strArr[1].split('');
 //return the count (hamming distance)
 return count;
 }
-
-
-
-console.log(HammingDistance(["10011", "10100"])); // returns 3
-console.log(HammingDistance(["helloworld", "worldhello"])); // returns 8

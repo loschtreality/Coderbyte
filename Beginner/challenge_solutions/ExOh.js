@@ -1,3 +1,5 @@
+//Create a function which tests whether there are an equal amount of x's and o's in a string
+
 function ExOh(str) {
 var xCount = 0;
 var oCount = 0;
@@ -12,5 +14,3 @@ for(var i = 0; i < chars.length; i++){
   }
   return xCount === oCount;
 }
-
-console.log(ExOh('xooxxo'));

@@ -34,7 +34,3 @@ var parseArr = strArr.map(function(input){if (/[\d]+/g.test(input)) {
   //return new array with numbers separated by commas
   return result.join(',');
 }
-
-
-//OffLineMinimum(["5","4","6","E","1","7","E","E","3","2"]);// returns 4,1,5
-console.log(OffLineMinimum(["5","4","6","E","1","7","E","E","3","2"]));

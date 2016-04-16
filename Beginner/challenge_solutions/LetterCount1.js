@@ -23,15 +23,10 @@ var position;
       greatest = 1;
   }
   highestFreq = Math.max.apply(null,result);
-  console.log(highestFreq,'highest');
-  console.log(result,'result adsfasd');
+
   if (highestFreq === 1) {
     return -1;
   }
   position = result.indexOf(highestFreq);
   return words[position];
 }
-
-
- console.log(LetterCountI('hello apppppppple'));
-//;

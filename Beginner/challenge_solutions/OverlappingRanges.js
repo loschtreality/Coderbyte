@@ -31,5 +31,3 @@ for (var j = 0; j < setOne.length; j++) {
   }
 
 }
-
-console.log(OverlappingRanges([4, 10, 2, 6, 3]));
