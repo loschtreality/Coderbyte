@@ -2,6 +2,9 @@
 
 
 function SimpleSymbols(str) {
+  if (str.length < 3) {
+    return false;
+  }
   str = str.split('+').filter(function(el){
     return /(\w)/gi.test(el);
   });
