@@ -18,6 +18,3 @@ function Superincreasing(arr) {
   return 'true';
 
 }
-
-
-console.log(Superincreasing([1, 3, 6, 13, 54]));

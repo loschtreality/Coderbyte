@@ -1,3 +1,5 @@
+//Write a function which checks whether a number is a power of two.
+
 function PowersofTwo(num) {
 	if(num % 2 === 0 && num < 4){
 		return 'true';
@@ -7,6 +9,3 @@ function PowersofTwo(num) {
 	}
 		return PowersofTwo((num)/2);
 }
-
-console.log(PowersofTwo(124));
-console.log(PowersofTwo(128));

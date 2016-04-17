@@ -140,3 +140,64 @@ QUnit.test("Overlapping Ranges",function(assert){
   assert.equal(OverlappingRanges([43, 120, 9, 1, 55]),'false',"returns 'false' when given [43, 120, 9, 1, 55]");
 
 });
+
+QUnit.test("Palindrome",function(assert){
+  assert.equal(Palindrome('racecar'), true,"returns true when given 'racecar'");
+  assert.equal(Palindrome('nodrome'), false,"returns false when given 'nodrome'");
+  assert.equal(Palindrome('is there a match here?'),false,"returns false when given 'is there a match here?'");
+  assert.equal(Palindrome('is there a match here?'),false,"returns false when given 'is there a match here?'");
+  assert.equal(Palindrome('Sore was I ere I saw Eros'),true,"returns true when given 'Sore was I ere I saw Eros'");
+});
+
+
+QUnit.test("Powers of Two",function(assert){
+  assert.equal(PowersofTwo(124),'false',"returns 'false' when given 124");
+  assert.equal(PowersofTwo(128),'true',"returns 'true' when given 128");
+  assert.equal(PowersofTwo(7),'false',"returns 'false' when given 7");
+  assert.equal(PowersofTwo(2),'true',"returns 'true' when given 2");
+});
+
+
+QUnit.test("Rectangle Area",function (assert) {
+  assert.equal(RectangleArea(["(0 0)", "(3 0)", "(0 2)", "(3 2)"]),6,"returns 6 when given ['(0 0)', '(3 0)', '(0 2)', '(3 2)']");
+  assert.equal(RectangleArea(['(1 1)','(1 3)','(3 1)','(3 3)']),4,"returns 4 when given ['(1 1)','(1 3)','(3 1)','(3 3)']");
+  assert.equal(RectangleArea(['(0 0)','(1 0)','(1 1)','(0 1)']),1,"returns 1 when given ['(0 0)','(1 0)','(1 1)','(0 1)']");
+});
+
+
+QUnit.test("Second Great Low",function(assert){
+  assert.equal(SecondGreatLow([1, 2, 78, 90, 100]),'2 90',"returns '2 90' when given [1, 2, 78, 90, 100]");
+  assert.equal(SecondGreatLow([1, 3, 5, 100, 200, 400]),'3 200',"returns '3 200' when given [1, 3, 5, 100, 200, 400]");
+  assert.equal(SecondGreatLow([7, 7, 90, 1000003]),'90 90',"returns '90 90' when given [7, 7, 90, 1000003]");
+  assert.equal(SecondGreatLow([7, 7, 12, 98, 106]),'12 98',"returns '12 98' when given [7, 7, 90, 1000003]");
+});
+
+QUnit.test("Simple Adding",function(assert){
+  assert.equal(SimpleAdding(12),78,"returns 78 when given 12");
+  assert.equal(SimpleAdding(16),136,"returns 136 when given 16");
+  assert.equal(SimpleAdding(1),1,"returns 1 when given 1");
+
+});
+
+QUnit.test("Simple Symbols",function(assert){
+  assert.equal(SimpleSymbols('+d===+a+'),false,"should return false when given '+d===+a+'");
+  assert.equal(SimpleSymbols('++d+===+c++==a'),false,"should return false when given '++d+===+c++==a'");
+  assert.equal(SimpleSymbols('+a+===+b+===+c+'),true,"should return true when given '+a+===+b+===+c+'");
+});
+
+
+QUnit.test("Super Increasing",function(assert){
+  assert.equal(Superincreasing([1, 3, 6, 13, 54]),'true',"returns 'true' when given [1, 3, 6, 13, 54]");
+  assert.equal(Superincreasing([1, 1, 1, 1, 1]),'false',"returns 'false' when given [1, 1, 1, 1, 1]");
+});
+
+QUnit.test("Third Greatest",function(assert){
+  assert.equal(ThirdGreatest(["hello", "world", "before", "all"]),'world',"returns 'world' when given ['hello', 'world', 'before', 'all']");
+  assert.equal(ThirdGreatest(['hello', 'world', 'after', 'all']),'after',"returns 'after' when given ['hello', 'world', 'after', 'all']");
+});
+
+QUnit.test("Time Convert",function(assert){
+  assert.equal(TimeConvert(63),"1:3","returns '1:3' when given 63");
+  assert.equal(TimeConvert(90),"1:30","returns '1:30' when given 90");
+  assert.equal(TimeConvert(100),"1:40","returns '1:40' when given 100");
+});

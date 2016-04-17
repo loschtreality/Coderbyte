@@ -33,8 +33,3 @@ var height = maxY[maxY.length-1] - maxY[0];
 return width * height;
 
 }
-
-
-//console.log(RectangleArea(["(0 0)", "(3 0)", "(0 2)", "(3 2)"])); //return 6
-//console.log(RectangleArea(["(1 1)","(1 3)","(3 1)","(3 3)"])); //return 4
-//console.log(RectangleArea(["(0 0)","(1 0)","(1 1)","(0 1)"])); //return 1

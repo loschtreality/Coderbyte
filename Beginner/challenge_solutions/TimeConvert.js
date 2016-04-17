@@ -7,4 +7,4 @@ function TimeConvert(num) {
 }
 
 
-console.log(TimeConvert(63));
+console.log(TimeConvert(100));

@@ -27,7 +27,3 @@ var thirdGreatIndex = wordLengths[2];
   //Else, return the only word at the targeted length;
   return result[0];
 }
-
-
-console.log(ThirdGreatest(["hello", "world", "before", "all"])); // returns 'world'
-console.log(ThirdGreatest(["hello", "world", "after", "all"])); // returns 'after'
